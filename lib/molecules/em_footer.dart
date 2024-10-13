@@ -1,4 +1,5 @@
 import 'package:etmine_design_appeco/fundation/em_colors.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class EtMineFooter extends StatelessWidget {
@@ -17,11 +18,11 @@ class EtMineFooter extends StatelessWidget {
         child: BottomNavigationBar(
           items: <BottomNavigationBarItem>[
             BottomNavigationBarItem(
-              icon: this.iconLeft,
+              icon: iconLeft,
               label: 'Home',
             ),
             BottomNavigationBarItem(
-              icon: this.iconRight,
+              icon: iconRight,
               label: 'School',
             ),
           ],
@@ -33,7 +34,9 @@ class EtMineFooter extends StatelessWidget {
           showSelectedLabels: false,
           iconSize: 30.0,
           onTap: (index) {
-            print('oprimio el elemento --> ' + index.toString());
+            if (kDebugMode) {
+              print('oprimio el elemento --> $index');
+            }
           },
         ));
   }

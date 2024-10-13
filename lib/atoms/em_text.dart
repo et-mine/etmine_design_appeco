@@ -18,7 +18,8 @@ class EtMineText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(text!,
-        style: TextStyle(color: colorText, fontSize: fontSize),
+        style: TextStyle(
+            fontFamily: 'DM Sans', color: colorText, fontSize: fontSize),
         textAlign: TextAlign.center,
         maxLines: 4);
   }

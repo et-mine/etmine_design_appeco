@@ -1,5 +1,6 @@
 import 'package:etmine_design_appeco/atoms/em_text.dart';
 import 'package:etmine_design_appeco/fundation/em_colors.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class EtMineAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -22,11 +23,19 @@ class EtMineAppBar extends StatelessWidget implements PreferredSizeWidget {
       actions: [
         IconButton(
           icon: iconAppBarr,
-          onPressed: () => {print("Oprimiste +")},
+          onPressed: () {
+            if (kDebugMode) {
+              print("Oprimiste +");
+            }
+          },
         ),
         IconButton(
           icon: const Icon(Icons.navigate_next),
-          onPressed: () => {print("Oprimiste >")},
+          onPressed: () {
+            if (kDebugMode) {
+              print("Oprimiste >");
+            }
+          },
         )
       ],
     );
