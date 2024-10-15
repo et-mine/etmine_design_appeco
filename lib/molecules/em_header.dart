@@ -1,15 +1,14 @@
 import 'package:etmine_design_appeco/atoms/em_text.dart';
 import 'package:etmine_design_appeco/fundation/em_colors.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class EtMineAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
   final bool back;
   final Icon? iconTexto;
+  final String? textoIcono;
   final IconButton? iconButtonPrincipal;
   final IconButton? iconButtonSecondary;
-  final String? texto;
 
   const EtMineAppBar(
       {super.key,
@@ -18,7 +17,7 @@ class EtMineAppBar extends StatelessWidget implements PreferredSizeWidget {
       this.iconTexto,
       this.iconButtonPrincipal,
       this.iconButtonSecondary,
-      this.texto});
+      this.textoIcono});
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +42,7 @@ class EtMineAppBar extends StatelessWidget implements PreferredSizeWidget {
             iconTexto ?? Container(),
             Container(
               margin: const EdgeInsets.only(left: 10.00),
-              child: H2(text: texto ?? ''),
+              child: NormalText(text: textoIcono ?? ''),
             )
           ],
         ),

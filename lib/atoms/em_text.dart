@@ -63,7 +63,8 @@ class NormalText extends StatelessWidget {
   Widget build(BuildContext context) {
     return EtMineText(
       text: text,
-      colorText: h3Color,
+      colorText: contentColor,
+      fontSize: contentSize,
       key: key,
     );
   }
