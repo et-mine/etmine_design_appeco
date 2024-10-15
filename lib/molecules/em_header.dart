@@ -5,38 +5,53 @@ import 'package:flutter/material.dart';
 
 class EtMineAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
-  final Icon iconAppBarr;
+  final bool back;
+  final Icon? iconPrincipal;
+  final Icon? iconSecondary;
 
   const EtMineAppBar(
       {super.key,
-      this.title = 'Arquitectura limpia',
-      this.iconAppBarr = const Icon(Icons.add)});
+      this.title = 'Design AppEco',
+      this.back = false,
+      this.iconPrincipal,
+      this.iconSecondary});
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: footerBackground,
+      backgroundColor: appBarDetails,
+      centerTitle: true,
       title: H1(
         text: title,
-        key: const Key('head-wc'),
+        key: const Key('head-em'),
       ),
+      leading: back
+          ? IconButton(
+              icon: const Icon(Icons.arrow_back_ios),
+              onPressed: () {
+                Navigator.pop(context);
+              },
+            )
+          : null,
       actions: [
-        IconButton(
-          icon: iconAppBarr,
-          onPressed: () {
-            if (kDebugMode) {
-              print("Oprimiste +");
-            }
-          },
-        ),
-        IconButton(
-          icon: const Icon(Icons.navigate_next),
-          onPressed: () {
-            if (kDebugMode) {
-              print("Oprimiste >");
-            }
-          },
-        )
+        if (iconPrincipal != null)
+          IconButton(
+            icon: iconPrincipal ?? const Icon(Icons.notifications),
+            onPressed: () {
+              if (kDebugMode) {
+                print("Oprimiste iconPrincipal");
+              }
+            },
+          ),
+        if (iconSecondary != null)
+          IconButton(
+            icon: iconSecondary ?? const Icon(Icons.navigate_next),
+            onPressed: () {
+              if (kDebugMode) {
+                print("Oprimiste iconSecondary");
+              }
+            },
+          )
       ],
     );
   }

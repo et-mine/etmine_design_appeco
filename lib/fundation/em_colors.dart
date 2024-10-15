@@ -7,3 +7,5 @@ const selectedItemColor = brandSecondnary;
 const unselectedItemColor = brandSecondnary;
 const footerBackground = brandPrimary;
 const headerBackground = scale05;
+const appBarDetails = scale00;
+const starReview = statusWarning;

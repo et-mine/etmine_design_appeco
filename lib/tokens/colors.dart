@@ -1,12 +1,12 @@
 import 'dart:ui';
 
-const brandPrimary = Color(0xFF401a71);
-const brandSecondnary = Color(0xFFFFFFFF);
-const statusInfo = Color(0xFF00448d);
+const brandPrimary = Color(0xFF3669C9);
+const brandSecondnary = Color(0xFF0C1A30);
+const statusInfo = Color(0xFFEFF5FB);
 const statusWarning = Color(0xFFffc20e);
 const statusDisabled = Color(0xFF747779);
-const statusSuccess = Color(0xFF16c98d);
-const statusDanger = Color(0xFFfa5e5b);
+const statusSuccess = Color(0xFF0ACF83);
+const statusDanger = Color(0xFFFE3A30);
 const scale00 = Color(0xFFFFFFFF);
 const scale01 = Color(0xFFF7F7F7);
 const scale02 = Color(0xFFE6E7E8);
