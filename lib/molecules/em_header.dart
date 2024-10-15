@@ -6,16 +6,18 @@ import 'package:flutter/material.dart';
 class EtMineAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
   final bool back;
-  final Icon? iconPrincipal;
-  final Icon? iconSecondary;
+  final Icon? iconTexto;
+  final IconButton? iconButtonPrincipal;
+  final IconButton? iconButtonSecondary;
   final String? texto;
 
   const EtMineAppBar(
       {super.key,
       this.title = 'Design AppEco',
       this.back = false,
-      this.iconPrincipal,
-      this.iconSecondary,
+      this.iconTexto,
+      this.iconButtonPrincipal,
+      this.iconButtonSecondary,
       this.texto});
 
   @override
@@ -36,32 +38,17 @@ class EtMineAppBar extends StatelessWidget implements PreferredSizeWidget {
             )
           : null,
       actions: [
-        if (iconPrincipal != null)
-          Stack(
-            children: [
-              IconButton(
-                icon: iconPrincipal ?? const Icon(Icons.notifications),
-                onPressed: () {
-                  if (kDebugMode) {
-                    print("Oprimiste iconPrincipal");
-                  }
-                },
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 10.0),
-                child: H2(text: texto ?? ''),
-              ),
-            ],
-          ),
-        if (iconSecondary != null)
-          IconButton(
-            icon: iconSecondary ?? const Icon(Icons.navigate_next),
-            onPressed: () {
-              if (kDebugMode) {
-                print("Oprimiste iconSecondary");
-              }
-            },
-          )
+        Stack(
+          children: [
+            iconTexto ?? Container(),
+            Container(
+              margin: const EdgeInsets.only(left: 10.00),
+              child: H2(text: texto ?? ''),
+            )
+          ],
+        ),
+        iconButtonPrincipal ?? Container(),
+        iconButtonSecondary ?? Container()
       ],
     );
   }
