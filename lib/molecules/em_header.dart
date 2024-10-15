@@ -8,13 +8,15 @@ class EtMineAppBar extends StatelessWidget implements PreferredSizeWidget {
   final bool back;
   final Icon? iconPrincipal;
   final Icon? iconSecondary;
+  final String? texto;
 
   const EtMineAppBar(
       {super.key,
       this.title = 'Design AppEco',
       this.back = false,
       this.iconPrincipal,
-      this.iconSecondary});
+      this.iconSecondary,
+      this.texto});
 
   @override
   Widget build(BuildContext context) {
@@ -43,6 +45,7 @@ class EtMineAppBar extends StatelessWidget implements PreferredSizeWidget {
               }
             },
           ),
+        H2(text: texto ?? ''),
         if (iconSecondary != null)
           IconButton(
             icon: iconSecondary ?? const Icon(Icons.navigate_next),

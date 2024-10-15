@@ -34,6 +34,7 @@ class H1 extends StatelessWidget {
     return EtMineText(
       text: text,
       colorText: h1Color,
+      fontSize: h1Size,
       key: Key('${key}h1'),
     );
   }
