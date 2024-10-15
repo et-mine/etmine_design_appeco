@@ -37,18 +37,22 @@ class EtMineAppBar extends StatelessWidget implements PreferredSizeWidget {
           : null,
       actions: [
         if (iconPrincipal != null)
-          IconButton(
-            icon: iconPrincipal ?? const Icon(Icons.notifications),
-            onPressed: () {
-              if (kDebugMode) {
-                print("Oprimiste iconPrincipal");
-              }
-            },
+          Stack(
+            children: [
+              IconButton(
+                icon: iconPrincipal ?? const Icon(Icons.notifications),
+                onPressed: () {
+                  if (kDebugMode) {
+                    print("Oprimiste iconPrincipal");
+                  }
+                },
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 10.0),
+                child: H2(text: texto ?? ''),
+              ),
+            ],
           ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 12.0),
-          child: H2(text: texto ?? ''),
-        ),
         if (iconSecondary != null)
           IconButton(
             icon: iconSecondary ?? const Icon(Icons.navigate_next),
