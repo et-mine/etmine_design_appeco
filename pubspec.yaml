@@ -38,7 +38,7 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: DM Sans
+    - family: DMSans
       fonts:
         - asset: fonts/DMSans_18pt-Black.ttf
         - asset: fonts/DMSans_18pt-BlackItalic.ttf

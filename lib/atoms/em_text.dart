@@ -19,7 +19,7 @@ class EtMineText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(text!,
         style: TextStyle(
-            fontFamily: 'DM Sans', color: colorText, fontSize: fontSize),
+            fontFamily: 'DMSans', color: colorText, fontSize: fontSize),
         textAlign: TextAlign.center,
         maxLines: 4);
   }
