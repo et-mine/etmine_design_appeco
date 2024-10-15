@@ -45,7 +45,10 @@ class EtMineAppBar extends StatelessWidget implements PreferredSizeWidget {
               }
             },
           ),
-        H2(text: texto ?? ''),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 12.0),
+          child: H2(text: texto ?? ''),
+        ),
         if (iconSecondary != null)
           IconButton(
             icon: iconSecondary ?? const Icon(Icons.navigate_next),
