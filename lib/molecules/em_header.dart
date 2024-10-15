@@ -41,7 +41,7 @@ class EtMineAppBar extends StatelessWidget implements PreferredSizeWidget {
           children: [
             iconTexto ?? Container(),
             Container(
-              margin: const EdgeInsets.only(left: 10.00),
+              margin: const EdgeInsets.only(left: 20.00),
               child: NormalText(text: textoIcono ?? ''),
             )
           ],

@@ -55,6 +55,21 @@ class H2 extends StatelessWidget {
   }
 }
 
+class SubTitle extends StatelessWidget {
+  final String? text;
+  const SubTitle({super.key, required this.text});
+
+  @override
+  Widget build(BuildContext context) {
+    return EtMineText(
+      text: text,
+      colorText: subTitleColor,
+      fontSize: subTitleSize,
+      key: key,
+    );
+  }
+}
+
 class NormalText extends StatelessWidget {
   final String? text;
   const NormalText({super.key, this.text});
