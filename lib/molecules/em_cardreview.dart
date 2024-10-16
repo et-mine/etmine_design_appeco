@@ -8,33 +8,29 @@ class EtMineCardReview extends StatelessWidget {
   final String textTool;
   final String textDetail;
   final int cantStars;
-  final double width;
-  final double height;
 
-  const EtMineCardReview(
-      {super.key,
-      this.imgPrincipal =
-          'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg',
-      this.textTitle = 'Minerva Vereau',
-      this.textTool = 'Hace 1 minuto',
-      this.textDetail =
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      this.cantStars = 4,
-      this.height = 110,
-      this.width = 300});
+  const EtMineCardReview({
+    super.key,
+    this.imgPrincipal =
+        'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg',
+    this.textTitle = 'Minerva Vereau',
+    this.textTool = 'Hace 1 minuto',
+    this.textDetail =
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    this.cantStars = 4,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: height,
-      width: width,
+    return IntrinsicHeight(
       child: Row(
         children: [
           CircleAvatar(
             radius: 25,
             backgroundImage: NetworkImage(imgPrincipal),
           ),
-          Column(
+          Expanded(
+              child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
@@ -70,7 +66,7 @@ class EtMineCardReview extends StatelessWidget {
                 maxLines: 3,
               )*/
             ],
-          )
+          ))
         ],
       ),
     );
