@@ -85,3 +85,17 @@ class NormalText extends StatelessWidget {
     );
   }
 }
+
+class EtMineRichText extends StatelessWidget {
+  final String? text;
+  const EtMineRichText({super.key, this.text});
+
+  @override
+  Widget build(BuildContext context) {
+    return RichText(
+        text: TextSpan(
+            text: text,
+            style:
+                const TextStyle(fontSize: contentSize, color: contentColor)));
+  }
+}

@@ -1,3 +1,4 @@
+import 'package:etmine_design_appeco/atoms/em_text.dart';
 import 'package:etmine_design_appeco/fundation/em_colors.dart';
 import 'package:flutter/material.dart';
 
@@ -32,16 +33,20 @@ class EtMineCardReview extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  Text(textTitle),
+                  SubTitle(text: textTitle),
                   Row(
-                    crossAxisAlignment: CrossAxisAlignment.end,
-                    children: [Text(textTool)],
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      NormalText(
+                        text: textTool,
+                      )
+                    ],
                   )
                 ],
               ),
               SizedBox(
-                width: 100,
-                height: 20,
+                width: 150,
+                height: 30,
                 child: ListView(
                   scrollDirection: Axis.horizontal,
                   children: List.generate(
@@ -58,7 +63,7 @@ class EtMineCardReview extends StatelessWidget {
                             )),
                 ),
               ),
-              Text(textDetail, maxLines: 3)
+              EtMineRichText(text: textDetail)
             ],
           )
         ],
