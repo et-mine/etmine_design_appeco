@@ -1,14 +1,14 @@
 import 'package:etmine_design_appeco/fundation/em_colors.dart';
 import 'package:flutter/material.dart';
 
-class EmCardReview extends StatelessWidget {
+class EtMineCardReview extends StatelessWidget {
   final String imgPrincipal;
   final String textTitle;
   final String textTool;
   final String textDetail;
   final int cantStars;
 
-  const EmCardReview(
+  const EtMineCardReview(
       {super.key,
       this.imgPrincipal =
           'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg',
