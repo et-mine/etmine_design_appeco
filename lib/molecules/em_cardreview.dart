@@ -24,6 +24,7 @@ class EtMineCardReview extends StatelessWidget {
   Widget build(BuildContext context) {
     return IntrinsicHeight(
       child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           CircleAvatar(
             radius: 25,
@@ -52,15 +53,16 @@ class EtMineCardReview extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   children: List.generate(
                       5,
-                      (index) => index <= cantStars
+                      (index) => index < cantStars
                           ? const Icon(
                               Icons.star,
                               size: 20,
-                              color: starReview,
+                              color: starReviewIn,
                             )
                           : const Icon(
                               Icons.star_border,
                               size: 20,
+                              color: starReviewOut,
                             )),
                 ),
               ),
