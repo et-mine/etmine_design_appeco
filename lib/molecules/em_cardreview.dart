@@ -33,10 +33,11 @@ class EtMineCardReview extends StatelessWidget {
           Column(
             children: [
               Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SubTitle(text: textTitle),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
+                    crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
                       NormalText(
                         text: textTool,
