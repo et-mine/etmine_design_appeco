@@ -39,21 +39,23 @@ class EtMineCardReview extends StatelessWidget {
                   )
                 ],
               ),
-              ListView(
-                shrinkWrap: true,
-                scrollDirection: Axis.horizontal,
-                children: List.generate(
-                    5,
-                    (index) => index <= cantStars
-                        ? const Icon(
-                            Icons.star,
-                            size: 20,
-                            color: starReview,
-                          )
-                        : const Icon(
-                            Icons.star_border,
-                            size: 20,
-                          )),
+              SizedBox(
+                width: 100,
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: List.generate(
+                      5,
+                      (index) => index <= cantStars
+                          ? const Icon(
+                              Icons.star,
+                              size: 20,
+                              color: starReview,
+                            )
+                          : const Icon(
+                              Icons.star_border,
+                              size: 20,
+                            )),
+                ),
               ),
               Text(textDetail, maxLines: 3)
             ],
