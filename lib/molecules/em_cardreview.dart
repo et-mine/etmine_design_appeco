@@ -8,6 +8,8 @@ class EtMineCardReview extends StatelessWidget {
   final String textTool;
   final String textDetail;
   final int cantStars;
+  final double width;
+  final double height;
 
   const EtMineCardReview(
       {super.key,
@@ -17,13 +19,15 @@ class EtMineCardReview extends StatelessWidget {
       this.textTool = 'Hace 1 minuto',
       this.textDetail =
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      this.cantStars = 4});
+      this.cantStars = 4,
+      this.height = 110,
+      this.width = 300});
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 110,
-      width: MediaQuery.sizeOf(context).width,
+      height: height,
+      width: width,
       child: Row(
         children: [
           CircleAvatar(
@@ -33,11 +37,10 @@ class EtMineCardReview extends StatelessWidget {
           Column(
             children: [
               Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SubTitle(text: textTitle),
                   Row(
-                    crossAxisAlignment: CrossAxisAlignment.end,
+                    mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       NormalText(
                         text: textTool,
