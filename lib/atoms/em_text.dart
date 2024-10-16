@@ -1,6 +1,7 @@
 import 'package:etmine_design_appeco/fundation/em_colors.dart';
 import 'package:etmine_design_appeco/tokens/typography.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class EtMineText extends StatelessWidget {
   final String? text;
@@ -18,8 +19,8 @@ class EtMineText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(text!,
-        style: TextStyle(
-            fontFamily: 'Merriweather', color: colorText, fontSize: fontSize),
+        style: GoogleFonts.dmSans(
+            textStyle: TextStyle(color: colorText, fontSize: fontSize)),
         textAlign: TextAlign.center,
         maxLines: 4);
   }
