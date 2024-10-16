@@ -16,7 +16,7 @@ class EtMineCardReview extends StatelessWidget {
     this.textTitle = 'Minerva Vereau',
     this.textTool = 'Hace 1 minuto',
     this.textDetail =
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Minerva Vereau.',
     this.cantStars = 4,
   });
 
