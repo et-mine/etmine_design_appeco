@@ -23,6 +23,7 @@ class EtMineCardReview extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: 110,
+      width: MediaQuery.sizeOf(context).width,
       child: Row(
         children: [
           CircleAvatar(
