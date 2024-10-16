@@ -64,10 +64,10 @@ class EtMineCardReview extends StatelessWidget {
                             )),
                 ),
               ),
-              EtMineRichText(
+              /*EtMineRichText(
                 text: textDetail,
                 maxLines: 3,
-              )
+              )*/
             ],
           )
         ],
