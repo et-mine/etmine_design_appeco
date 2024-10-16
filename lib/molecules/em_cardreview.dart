@@ -31,7 +31,13 @@ class EtMineCardReview extends StatelessWidget {
           Column(
             children: [
               Row(
-                children: [Text(textTitle), const Spacer(), Text(textTool)],
+                children: [
+                  Text(textTitle),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [Text(textTool)],
+                  )
+                ],
               ),
               ListView(
                 shrinkWrap: true,
