@@ -34,16 +34,19 @@ class EtMineCardReview extends StatelessWidget {
                 children: [Text(textTitle), const Spacer(), Text(textTool)],
               ),
               ListView(
+                shrinkWrap: true,
                 scrollDirection: Axis.horizontal,
                 children: List.generate(
                     5,
                     (index) => index <= cantStars
                         ? const Icon(
                             Icons.star,
+                            size: 20,
                             color: starReview,
                           )
                         : const Icon(
                             Icons.star_border,
+                            size: 20,
                           )),
               ),
               Text(textDetail, maxLines: 3)
