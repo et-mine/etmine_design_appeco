@@ -25,7 +25,7 @@ class EtMineCardReview extends StatelessWidget {
       child: Row(
         children: [
           CircleAvatar(
-            radius: 40,
+            radius: 25,
             backgroundImage: NetworkImage(imgPrincipal),
           ),
           Column(
@@ -41,6 +41,7 @@ class EtMineCardReview extends StatelessWidget {
               ),
               SizedBox(
                 width: 100,
+                height: 20,
                 child: ListView(
                   scrollDirection: Axis.horizontal,
                   children: List.generate(
