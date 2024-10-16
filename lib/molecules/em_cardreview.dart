@@ -35,17 +35,14 @@ class EtMineCardReview extends StatelessWidget {
             backgroundImage: NetworkImage(imgPrincipal),
           ),
           Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
                 children: [
                   SubTitle(text: textTitle),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      NormalText(
-                        text: textTool,
-                      )
-                    ],
+                  const Spacer(),
+                  NormalText(
+                    text: textTool,
                   )
                 ],
               ),
