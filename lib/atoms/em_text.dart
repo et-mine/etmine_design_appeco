@@ -88,11 +88,13 @@ class NormalText extends StatelessWidget {
 
 class EtMineRichText extends StatelessWidget {
   final String? text;
-  const EtMineRichText({super.key, this.text});
+  final int? maxLines;
+  const EtMineRichText({super.key, this.text, this.maxLines});
 
   @override
   Widget build(BuildContext context) {
     return RichText(
+        maxLines: maxLines,
         text: TextSpan(
             text: text,
             style:
