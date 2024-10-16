@@ -29,6 +29,9 @@ class EtMineCardReview extends StatelessWidget {
             radius: 25,
             backgroundImage: NetworkImage(imgPrincipal),
           ),
+          const SizedBox(
+            width: 10,
+          ),
           Expanded(
               child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -37,7 +40,7 @@ class EtMineCardReview extends StatelessWidget {
                 children: [
                   SubTitle(text: textTitle),
                   const Spacer(),
-                  NormalText(
+                  ToolTipText(
                     text: textTool,
                   )
                 ],
@@ -61,10 +64,10 @@ class EtMineCardReview extends StatelessWidget {
                             )),
                 ),
               ),
-              /*EtMineRichText(
+              EtMineRichText(
                 text: textDetail,
                 maxLines: 3,
-              )*/
+              )
             ],
           ))
         ],

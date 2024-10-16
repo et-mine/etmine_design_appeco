@@ -5,6 +5,7 @@ const h2Color = scale06;
 const h3Color = scale03;
 const subTitleColor = scale06;
 const contentColor = scale06;
+const toolTipColor = scale05;
 const selectedItemColor = brandSecondnary;
 const unselectedItemColor = brandSecondnary;
 const footerBackground = brandPrimary;

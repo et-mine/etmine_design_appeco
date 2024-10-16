@@ -86,6 +86,21 @@ class NormalText extends StatelessWidget {
   }
 }
 
+class ToolTipText extends StatelessWidget {
+  final String? text;
+  const ToolTipText({super.key, this.text});
+
+  @override
+  Widget build(BuildContext context) {
+    return EtMineText(
+      text: text,
+      colorText: contentColor,
+      fontSize: toolTipSize,
+      key: key,
+    );
+  }
+}
+
 class EtMineRichText extends StatelessWidget {
   final String? text;
   final int? maxLines;
