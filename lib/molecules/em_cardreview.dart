@@ -39,8 +39,9 @@ class EtMineCardReview extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  SubTitle(text: textTitle),
-                  const Spacer(),
+                  Expanded(
+                    child: SubTitle(text: textTitle),
+                  ),
                   ToolTipText(
                     text: textTool,
                   )
