@@ -11,7 +11,7 @@ class EtMineButtonAction extends StatelessWidget {
   const EtMineButtonAction(
       {super.key,
       required this.textButton,
-      this.colorBackground = textWhite,
+      this.colorBackground = buttonColor,
       this.colorText = textWhite,
       required this.onTap});
 
