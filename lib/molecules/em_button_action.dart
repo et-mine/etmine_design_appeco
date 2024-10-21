@@ -24,6 +24,7 @@ class EtMineButtonAction extends StatelessWidget {
         width: double.infinity,
         padding: const EdgeInsets.all(8),
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             NormalText(
               text: textButton,
