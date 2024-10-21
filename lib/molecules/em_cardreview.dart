@@ -69,6 +69,7 @@ class EtMineCardReview extends StatelessWidget {
               ),
               EtMineRichText(
                 text: textDetail,
+                textAlign: TextAlign.justify,
                 maxLines: 3,
               )
             ],

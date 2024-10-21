@@ -21,19 +21,21 @@ class EtMineText extends StatelessWidget {
     return Text(text!,
         style: GoogleFonts.dmSans(
             textStyle: TextStyle(color: colorText, fontSize: fontSize)),
-        textAlign: TextAlign.center,
+        textAlign: textAlign,
         maxLines: 4);
   }
 }
 
 class H1 extends StatelessWidget {
   final String? text;
-  const H1({super.key, required this.text});
+  final TextAlign? textAlign;
+  const H1({super.key, required this.text, this.textAlign});
 
   @override
   Widget build(BuildContext context) {
     return EtMineText(
       text: text,
+      textAlign: textAlign,
       colorText: h1Color,
       fontSize: h1Size,
       key: Key('${key}h1'),
@@ -43,12 +45,14 @@ class H1 extends StatelessWidget {
 
 class H2 extends StatelessWidget {
   final String? text;
-  const H2({super.key, required this.text});
+  final TextAlign? textAlign;
+  const H2({super.key, required this.text, this.textAlign});
 
   @override
   Widget build(BuildContext context) {
     return EtMineText(
       text: text,
+      textAlign: textAlign,
       colorText: h2Color,
       fontSize: h2Size,
       key: key,
@@ -58,12 +62,14 @@ class H2 extends StatelessWidget {
 
 class SubTitle extends StatelessWidget {
   final String? text;
-  const SubTitle({super.key, required this.text});
+  final TextAlign? textAlign;
+  const SubTitle({super.key, required this.text, this.textAlign});
 
   @override
   Widget build(BuildContext context) {
     return EtMineText(
       text: text,
+      textAlign: textAlign,
       colorText: subTitleColor,
       fontSize: subTitleSize,
       key: key,
@@ -73,12 +79,14 @@ class SubTitle extends StatelessWidget {
 
 class NormalText extends StatelessWidget {
   final String? text;
-  const NormalText({super.key, this.text});
+  final TextAlign? textAlign;
+  const NormalText({super.key, this.text, this.textAlign});
 
   @override
   Widget build(BuildContext context) {
     return EtMineText(
       text: text,
+      textAlign: textAlign,
       colorText: contentColor,
       fontSize: contentSize,
       key: key,
@@ -88,12 +96,14 @@ class NormalText extends StatelessWidget {
 
 class ToolTipText extends StatelessWidget {
   final String? text;
-  const ToolTipText({super.key, this.text});
+  final TextAlign? textAlign;
+  const ToolTipText({super.key, this.text, this.textAlign});
 
   @override
   Widget build(BuildContext context) {
     return EtMineText(
       text: text,
+      textAlign: textAlign,
       colorText: contentColor,
       fontSize: toolTipSize,
       key: key,
@@ -102,14 +112,17 @@ class ToolTipText extends StatelessWidget {
 }
 
 class EtMineRichText extends StatelessWidget {
-  final String? text;
+  final String text;
+  final TextAlign textAlign;
   final int? maxLines;
-  const EtMineRichText({super.key, this.text, this.maxLines});
+  const EtMineRichText(
+      {super.key, required this.text, required this.textAlign, this.maxLines});
 
   @override
   Widget build(BuildContext context) {
     return RichText(
         maxLines: maxLines,
+        textAlign: textAlign,
         text: TextSpan(
             text: text,
             style:
