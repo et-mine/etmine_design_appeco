@@ -22,7 +22,7 @@ class EtMineButtonAction extends StatelessWidget {
       child: Container(
         color: colorBackground,
         width: double.infinity,
-        padding: const EdgeInsets.all(8),
+        padding: const EdgeInsets.all(12),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
