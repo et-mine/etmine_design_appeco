@@ -6,24 +6,31 @@ class EtMineButtonAction extends StatelessWidget {
   final String textButton;
   final Color colorBackground;
   final Color colorText;
+  final Function() onTap;
+
   const EtMineButtonAction(
       {super.key,
       required this.textButton,
       this.colorBackground = textWhite,
-      this.colorText = textWhite});
+      this.colorText = textWhite,
+      required this.onTap});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: colorBackground,
-      padding: const EdgeInsets.all(20),
-      child: Row(
-        children: [
-          SubTitle(
-            text: textButton,
-            textColor: colorText,
-          )
-        ],
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        color: colorBackground,
+        height: 50,
+        padding: const EdgeInsets.all(20),
+        child: Row(
+          children: [
+            SubTitle(
+              text: textButton,
+              textColor: colorText,
+            )
+          ],
+        ),
       ),
     );
   }
