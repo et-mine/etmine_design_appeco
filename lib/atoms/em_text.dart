@@ -63,14 +63,19 @@ class H2 extends StatelessWidget {
 class SubTitle extends StatelessWidget {
   final String? text;
   final TextAlign? textAlign;
-  const SubTitle({super.key, required this.text, this.textAlign});
+  final Color? textColor;
+  const SubTitle(
+      {super.key,
+      required this.text,
+      this.textAlign,
+      this.textColor = subTitleColor});
 
   @override
   Widget build(BuildContext context) {
     return EtMineText(
       text: text,
       textAlign: textAlign,
-      colorText: subTitleColor,
+      colorText: textColor,
       fontSize: subTitleSize,
       key: key,
     );

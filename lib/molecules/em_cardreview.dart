@@ -40,10 +40,14 @@ class EtMineCardReview extends StatelessWidget {
               Row(
                 children: [
                   Expanded(
-                    child: SubTitle(text: textTitle),
+                    child: SubTitle(
+                      text: textTitle,
+                      textAlign: TextAlign.left,
+                    ),
                   ),
                   ToolTipText(
                     text: textTool,
+                    textAlign: TextAlign.right,
                   )
                 ],
               ),
