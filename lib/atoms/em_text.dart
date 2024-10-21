@@ -85,14 +85,17 @@ class SubTitle extends StatelessWidget {
 class NormalText extends StatelessWidget {
   final String? text;
   final TextAlign? textAlign;
-  const NormalText({super.key, this.text, this.textAlign});
+  final Color? colorText;
+
+  const NormalText(
+      {super.key, this.text, this.textAlign, this.colorText = contentColor});
 
   @override
   Widget build(BuildContext context) {
     return EtMineText(
       text: text,
       textAlign: textAlign,
-      colorText: contentColor,
+      colorText: colorText,
       fontSize: contentSize,
       key: key,
     );

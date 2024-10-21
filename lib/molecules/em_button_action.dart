@@ -26,9 +26,9 @@ class EtMineButtonAction extends StatelessWidget {
         padding: const EdgeInsets.all(20),
         child: Row(
           children: [
-            SubTitle(
+            NormalText(
               text: textButton,
-              textColor: colorText,
+              colorText: colorText,
             )
           ],
         ),
